@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--fontawesome for using icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" />
+    <!--bootstrap framework for basic styling-->
+    <title>My BookList App</title>
+    <style>
+        body {
+            background-color: powderblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center" style="font-size:60px;font-family:'Franklin Gothic Medium';color:rgb(224, 82, 141);" <i class='fas fa-book' style='font-size:55px;color:rgb(224, 82, 141)'>
+            </i> Simple<span class="text-justify"> Book </span>List</h1>
+        <form id="book-form">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year</label>
+                <input type="text" id="year" class="form-control" />
+            </div>
+
+            <input type="submit" class="btn btn-outline-primary btn-block" style='font-size:25px' value="Add Book">
+            <!--btn-info for color/style,btn-block for entire width of parent element-->
+            <input type="reset" class="btn btn-outline-primary btn-block" style='font-size:25px' value="Reset Input">
+        </form>
+        <table class="table table-striped mt-5 text-center">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
